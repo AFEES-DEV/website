@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub| Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">Food<span>Hub</span></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h1>Our Menu</h1>
+         <div class="menu-container">
+            <div class="card">
+                <img src="beef.jpg" alt="">
+                <h3>Beef Burger</h3>
+                <p>#2500</p>
+               <a class="btn" onclick="addToCart('Beef Burger',2500)">Add</a>
+            </div>
+
+            <div class="card">
+                <img src="Buffalo-Chicken-Pizza.jpg" alt="">
+                <h3>Buffalo-Chicken-Pizza </h3>
+                <p>#4800</p>
+                <a class="btn" onclick="addToCart('Buffalo-Chicken-Pizza',4800)">Add</a>
+            </div>
+
+              <div class="card">
+                <img src="fried-rice.jpg" alt="">
+                <h3>Fried-rice and Chicken</h3>
+                <p>#3000</p>
+                <a class="btn" onclick="addToCart('Fried-rice and Chicken',2500)">Add</a>
+            </div>
+         </div>
+    
+    
+    </section>
+    <h2 style="text-align: center;margin-top: 40px;">Your Cart</h2>
+    <div id="cart" style="width: 90%;margin: auto;"></div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
