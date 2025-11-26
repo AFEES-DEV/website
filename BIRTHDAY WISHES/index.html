@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Oluwasoro Favour Bukola 🎉</title>
+  <style>
+    :root{
+      --bg:#fff6f9; --card:#ffffff; --accent1:#ff6bcb; --accent2:#ffd86b; --text:#222;
+      --radius:18px; --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(135deg,var(--bg),#f0f7ff); color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px;
+    }
+    .wrap{width:100%; max-width:980px}
+    header{display:flex; gap:18px; align-items:center; margin-bottom:18px}
+    .avatar{width:96px;height:96px;border-radius:16px;flex:0 0 96px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    h1{margin:0;font-size:24px}
+    p.lead{margin:6px 0 0;color:#444}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .aside{order:-1}}
+
+    .card{background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:0 8px 30px rgba(20,30,50,0.06)}
+
+    /* MAIN COLUMN */
+    .hero{padding:22px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3)); position:relative; overflow:hidden}
+    .hero .message{font-size:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:999px;background:var(--accent1);color:#fff;font-weight:600;text-decoration:none;box-shadow:0 6px 18px rgba(255,107,203,0.18)}
+
+    .sections{margin-top:14px; display:flex; flex-direction:column; gap:14px}
+
+    /* Memories gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .mem{background:linear-gradient(180deg,#fff,#fffef8); border-radius:10px; padding:8px; text-align:center; font-size:13px}
+    .mem img{width:100%; height:120px; object-fit:cover; border-radius:8px}
+
+    /* Why you're special */
+    .special-list{display:grid;grid-template-columns:repeat(2,1fr); gap:8px}
+    .special-item{background:var(--glass); padding:10px;border-radius:10px; font-weight:600}
+
+    /* Compliment generator */
+    .compliment{display:flex; gap:8px; align-items:center}
+    .compliment .out{flex:1; padding:12px; border-radius:10px; background:#fff}
+
+    /* Aside */
+    .aside .card{padding:14px}
+    .countdown{font-weight:700; font-size:26px}
+
+    footer{margin-top:18px; text-align:center; color:#666; font-size:13px}
+
+    /* small helpers */
+    .center{display:flex;align-items:center;justify-content:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">OF</div>
+      <div>
+        <h1>Happy Birthday, <span id="friendName">Oluwasoro Favour Bukola</span> 🎉</h1>
+        <p class="lead">A little site made with ❤️ — From me your Bestfriend AFEES.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card hero">
+          <div class="center" style="justify-content:space-between;gap:12px;align-items:center">
+            <div>
+              <div class="message" id="heroMsg">Wishing you a year full of joy, growth, and silly little victories — you deserve the best!</div>
+              <div style="margin-top:12px">
+                <a class="btn" id="openCardBtn">Open your digital card</a>
+                <a class="btn" id="surpriseBtn" style="background:var(--accent2);color:#222;margin-left:8px">Surprise me</a>
+              </div>
+            </div>
+            <div style="width:120px;text-align:center">
+              <div style="font-size:12px;color:#777">Age</div>
+              <div class="countdown" id="age">17</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="sections">
+          <section class="card">
+            <h3 style="margin-top:0">Memories Gallery</h3>
+            <div class="gallery" id="gallery">
+              <!-- Replace the placeholders with your images -->
+              <div class="mem"><img src="img-1.jpg" alt="mem1"><div>UNIOSUN picture</div></div>
+              <div class="mem"><img src="img-2.png" alt="mem2"><div>SOCIAL-DAY</div></div>
+              <div class="mem"><img src="img-3.png" alt="mem3"><div>CHILD-HOOD </div></div>
+            </div>
+            <small style="display:block;margin-top:8px;color:#666">Tip: Replace placeholder images with real photos by opening the HTML and swapping the image URLs.</small>
+          </section>
+
+          <section class="card">
+            <h3 style="margin-top:0">Why you're special</h3>
+            <div class="special-list" id="specialList">
+              <div class="special-item">Kind and thoughtful</div>
+              <div class="special-item">Always makes me laugh</div>
+              <div class="special-item">Brave and determined</div>
+              <div class="special-item">Great listener</div>
+            </div>
+            <small style="display:block;margin-top:8px;color:#666">These are editable in the HTML — replace with personal reasons.</small>
+          </section>
+
+          <section class="card">
+            <h3 style="margin-top:0">Compliment generator</h3>
+            <div class="compliment">
+              <div class="out" id="complimentOut">Click the button to get a compliment ✨</div>
+              <button class="btn" id="complimentBtn" style="border-radius:12px">Generate</button>
+            </div>
+          </section>
+        </div>
+
+      </main>
+
+      <aside class="aside">
+        <div class="card">
+          <h3 style="margin-top:0">Digital Card</h3>
+          <div id="cardContent">Open the card to see a message and a little animation.</div>
+          <div style="margin-top:12px; display:flex; gap:8px">
+            <button class="btn" id="download" style="flex:1;border-radius:10px">Download as PNG</button>
+            <button class="btn" id="share" style="flex:1;background:#9bf; color:#022">Share</button>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4 style="margin:0">Quick info</h4>
+          <p style="margin:8px 0 0;color:#555">Open the site on your friend's phone and show it to them — or host it for free on GitHub Pages / Netlify.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Made with love —  Happy birthday, Oluwasoro!
+    </footer>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas" style="position:fixed;left:0;top:0;pointer-events:none;z-index:9999"></canvas>
+
+  <script>
+    // --- Config (editable) ---
+    const FRIEND_NAME = 'Oluwasoro Favour Bukola';
+    const BirthDate = new Date("November 25,2025 00:00:00"); // set to 'YYYY-MM-DD' if you want the age/countdown to work
+
+    // Inject name
+    document.getElementById('friendName').textContent = 'Oluwasoro Favour Bukola';
+
+    // Age display (if BIRTHDAY set)
+    function calcAge(datestr){
+      if(!datestr) return '—';
+      const b=new Date(datestr); const now=new Date();
+      let age=now.getFullYear()-b.getFullYear(); const m=now.getMonth()-b.getMonth();
+      if(m<0|| (m===0 && now.getDate()<b.getDate())) age--;
+      return age;
+    }
+    document.getElementById('age').textContent = calcAge(BIRTHDAY);
+
+    // Compliments list
+    const compliments = [
+      "Your smile can light up the whole room.",
+      "You're braver than you think.",
+      "You make people feel safe and heard.",
+      "Your energy is contagious.",
+      "You're creative and inspiring.",
+      "You show so much kindness in small ways.",
+      "You have the best sense of humor.",
+      "You're an amazing friend."
+    ];
+
+    document.getElementById("complimentBtn").addEventListener("click", ()=>{
+      const i=Math.floor(Math.random()*compliments.length);
+      document.getElementById('complimentOut').textContent = compliments[i];
+      burstConfetti();
+    });
+
+    // Surprise button shows the card
+    document.getElementById("openCardBtn").addEventListener('click', ()=>{
+      showCard(); burstConfetti();
+    });
+    document.getElementById('surpriseBtn').addEventListener('click', ()=>{ alert('Surprise! Wishing you a fantastic year ahead — you are loved.'); burstConfetti(); });
+
+    // Simple digital card content
+    function showCard(){
+      const card = document.getElementById('cardContent');
+      card.innerHTML = `
+        <div style="padding:12px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white">
+          <h3 style="margin:0">Happy Birthday, ${FRIEND_NAME.split(' ')[0]}! 🎂</h3>
+          <p style="margin:8px 0 0">May your day be full of sweets, songs and surprises.</p>
+        </div>
+      `;
+    }
+
+    // Download card as PNG (simple screenshot via canvas)
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const node = document.querySelector('#cardContent');
+      htmlToImage(node).then(url=>{
+        const a=document.createElement('a'); a.href=url; a.download=(FRIEND_NAME.replace(/\s+/g,'_')||'card')+'.png'; a.click();
+      }).catch(()=>alert('Download failed — try saving the page manually.'));
+    });
+
+    // Share button -> copy page URL
+    document.getElementById('shareBtn').addEventListener('click', ()=>{
+      if(navigator.share){ navigator.share({title:"Happy Birthday ${FRIEND_NAME}, text:'Open this special birthday site!', url:location.href"}); }
+      else{ navigator.clipboard.writeText(location.href).then(()=>alert('Page URL copied — send it to them!')) }
+    });
+
+    // --- confetti implementation (lightweight) ---
+    const canvas = document.getElementById('confettiCanvas'); const ctx = canvas.getContext('2d');
+    let confettiPieces=[]; function resize(){canvas.width=window.innerWidth; canvas.height=window.innerHeight}
+    window.addEventListener('resize', resize); resize();
+    function rand(min,max){return Math.random()*(max-min)+min}
+    function createConfetti(n=60){ for(let i=0;i<n;i++){ confettiPieces.push({x:rand(0,canvas.width),y:rand(-canvas.height,0),w:rand(6,12),h:rand(8,18),r:rand(0,360),vy:rand(1,4),vx:rand(-1,1),color:['#ff6bcb','#ffd86b','#9bf','#7af','#c6aaff'][Math.floor(rand(0,5))]}) }}
+    function updateConfetti(){ ctx.clearRect(0,0,canvas.width,canvas.height); for(let i=confettiPieces.length-1;i>=0;i--){ const p=confettiPieces[i]; p.x+=p.vx; p.y+=p.vy; p.r+=2; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r*Math.PI/180); ctx.fillStyle=p.color; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore(); if(p.y>canvas.height+20) confettiPieces.splice(i,1); } }
+    function anim(){ updateConfetti(); requestAnimationFrame(anim) } anim();
+    function burstConfetti(){ createConfetti(60); }
+
+    // lightweight html-to-image (no external libs): render a node to canvas (limited)
+    function htmlToImage(node){
+      return new Promise((resolve,reject)=>{
+        try{
+          const w=node.offsetWidth, h=node.offsetHeight;
+          const temp = document.createElement('canvas'); temp.width=w; temp.height=h; const tctx=temp.getContext('2d');
+          // paint white background
+          tctx.fillStyle='#fff'; tctx.fillRect(0,0,w,h);
+          // draw text (best-effort)
+          const text = node.innerText || node.textContent;
+          tctx.fillStyle='#111'; tctx.font='16px sans-serif'; wrapText(tctx, text, 12, 24, w-24, 20);
+          resolve(temp.toDataURL('image/png'));
+        }catch(e){reject(e)}
+      });
+    }
+    function wrapText(ctx, text, x, y, maxWidth, lineHeight){ const words=text.split(' '); let line=''; for(let n=0;n<words.length;n++){ const testLine=line+words[n]+' '; const metrics=ctx.measureText(testLine); const testWidth=metrics.width; if(testWidth>maxWidth && n>0){ ctx.fillText(line, x, y); line=words[n]+' '; y+=lineHeight; }else{ line=testLine; } } ctx.fillText(line, x, y); }
+
+    // Small accessibility: keyboard shortcut G to generate compliment
+    document.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='g'){ document.getElementById('complimentBtn').click(); } });
+
+    // Initial small animation
+    setTimeout(()=>{burstConfetti();},600);
+  </script>
+</body>
+</html>
